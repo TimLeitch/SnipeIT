@@ -23,3 +23,8 @@ class Snipe:
         url = self.url + '/users/' + str(id) +'/assets'
         response = requests.get(url, headers=self.headers)
         return response.json()
+    
+    def get_assets(self):
+        url = self.url + '/hardware'
+        response = requests.get(url, headers=self.headers)
+        return response.json()
