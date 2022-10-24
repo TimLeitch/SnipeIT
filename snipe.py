@@ -1,5 +1,6 @@
 import requests
 import configparser
+
 #create a snipe class
 
 config = configparser.ConfigParser()
@@ -18,4 +19,7 @@ class Snipe:
         return response.json()
     
         
-    
+    def get_assets(self,id):
+        url = self.url + '/users/' + str(id) +'/assets'
+        response = requests.get(url, headers=self.headers)
+        return response.json()
