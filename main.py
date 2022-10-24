@@ -37,7 +37,7 @@ def get_users():
         print(user['first_name'], user['last_name'])
         print('Title:', user["jobtitle"])      
         if user['assets_count'] > 0:
-            assets = snipe.get_assets(snipe,user['id'])
+            assets = snipe.get_users_assets(snipe,user['id'])
             print('Assets Count:', user['assets_count'])
             for asset in assets['rows']:
                 print('\tName:',asset['name'])
@@ -54,10 +54,7 @@ def get_users_no_assets():
             print('Title:', user["jobtitle"])
             print('Assets Count:', user['assets_count'])
             print()
-        
-
-
-        
+                
 def get_old_assets():
     #get todays date
     today = time()

@@ -19,7 +19,7 @@ class Snipe:
         return response.json()
     
         
-    def get_assets(self,id):
+    def get_user_assets(self,id):
         url = self.url + '/users/' + str(id) +'/assets'
         response = requests.get(url, headers=self.headers)
         return response.json()
