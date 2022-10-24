@@ -9,7 +9,7 @@ token = config['snipe']['token']
 
 class Snipe:
     
-    url = 'https://terrafirma.snipe-it.io/api/v1'
+    url = config['snipe']['url']
     headers = {'accept': 'application/json', 'Authorization': 'Bearer ' + token}
         
     def get_users(self):
