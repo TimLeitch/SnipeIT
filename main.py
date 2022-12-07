@@ -56,9 +56,7 @@ def get_users_no_assets():
             print()
                 
 def get_old_assets():
-    #get todays date
     today = time()
-    
     assets = snipe.get_assets(snipe)
     for each in assets['rows']:
         if each['purchase_date'] != None:
@@ -73,8 +71,7 @@ def get_old_assets():
                     pass
             except:
                 pass
-            
-            
+                      
 def get_assets_missing_purchasedate():
     assets = snipe.get_assets(snipe)
     for each in assets['rows']:
